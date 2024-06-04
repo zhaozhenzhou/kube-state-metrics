@@ -5,7 +5,7 @@ ARG GOARCH
 ENV GOARCH=${GOARCH}
 WORKDIR /go/src/k8s.io/kube-state-metrics/
 COPY . /go/src/k8s.io/kube-state-metrics/
-
+ 
 RUN make build-local
 
 FROM gcr.io/distroless/static:latest-${GOARCH}
